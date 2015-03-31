@@ -15,25 +15,58 @@ Furthermore, I certify that this assignment was prepared by me specifically for 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include "foodDiary.h"
+#include "linkedList.h"
 
 int main(int argc, char * argv[]) {
+/*Variable initialization*/
 	char path[100];
 	char token[50];
-	char ** foodStringArray;
 	FILE * input;
-	int i = 0;
+	Food * tempFood;
+	char * test;
+	Food * theList;
+	double totalCalories = 0;
+	tracker * calTracker = malloc(sizeof(tracker));
+	Food * healthyList = malloc(sizeof(Food));
+	Food * junkList = malloc(sizeof(Food));
+/*Check command line arguments*/
 	if (argc != 2) {
 		printf("Incorrect command line arguments\n");
 		exit(0);
 	}
+/*Open file*/
 	strcpy(path, argv[1]);
 	input = fopen(path, "r");
-	foodStringArray = malloc(sizeof(char * )*100);
-	while(fgets(token, 50, input) != NULL) {
-		strcpy(foodStringArray[i], token);
-		i++;
+/*Creates a healthy and junk list*/
+	while (test != NULL) {
+		test = fgets(token, 100, input);
+		if (test != NULL) {
+			tempFood = parseString(token);
+			totalCalories = updateTracker(calTracker, tempFood, totalCalories);
+			if (tempFood->type == 'h') {
+				healthyList = addToBack(healthyList, tempFood);
+			} else {
+				junkList = addToBack(junkList, tempFood);
+			}
+		}
 	}
-
+/*Removes null member from front*/
+	healthyList = removeFromFront(healthyList);
+	junkList = removeFromFront(junkList);
+/*Merges healthy and junk lists*/
+	theList = addToBack(healthyList, junkList);
+/*Prints total calories*/
+	totalCalories = ceil(totalCalories);
+	printf("%.0f\n", totalCalories);
+/*Prints average calories/item for each food group*/
+	printAverage(calTracker);
+/*Prints list*/
+	printList(theList);
+/*Freeing memory*/
+	destroyElement(theList);
+	destroyList(theList);
+	free(calTracker);
 	return 0;
 }

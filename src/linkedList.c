@@ -49,10 +49,14 @@ Food * addToFront(Food * theList, Food * toBeAdded) {
 Food * addToBack(Food * theList, Food * toBeAdded) {
 	Food * current;
 	current = theList;
-	while (current->next != NULL) {
-		current = current->next;
+	if (current == NULL) {
+		return toBeAdded;
+	} else {
+		while (current->next != NULL) {
+			current = current->next;
+		}
+		current->next = toBeAdded;
 	}
-	current->next = toBeAdded;
 	return theList;
 }
 

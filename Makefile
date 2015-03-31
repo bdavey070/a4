@@ -5,10 +5,16 @@ CFLAGS      =	-Wall  -pedantic -g -Iinclude
 
 
 diary:
-	gcc $(CFLAGS)  putYourSourceFileshere -o bin/nameYOurExecutableHere
+	gcc $(CFLAGS)  src/foodDiary.c src/foodDiaryFunctions.c src/linkedList.c -o bin/foodDiary
 
 test: 
-	gcc $(CFLAGS) src/yourMainTestFileHere src/linkedList.c  -o bin/listTest
+	gcc $(CFLAGS) src/test.c src/linkedList.c -o bin/listTest
 
 clean:
 	@ rm *.o
+
+testRun:
+	./bin/listTest docs/testFile.txt
+
+diaryRun:
+	./bin/foodDiary docs/diaryTest.txt

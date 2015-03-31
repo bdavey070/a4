@@ -1,0 +1,7 @@
+chips,fat,1200.01,j
+beef,meat,130.45,h
+milk,dairy,500.00,h
+wheat,grains,3900.45,h
+apple,vegfruit,10.00,h
+cookies,fat,1000.00,j
+chicken,meat,350.02,h

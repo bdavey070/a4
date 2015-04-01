@@ -16,7 +16,7 @@ Furthermore, I certify that this assignment was prepared by me specifically for 
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "foodDiary.h"
+#include "diary.h"
 #include "linkedList.h"
 
 int main(int argc, char * argv[]) {
@@ -68,5 +68,7 @@ int main(int argc, char * argv[]) {
 	destroyElement(theList);
 	destroyList(theList);
 	free(calTracker);
+/*Closing file*/
+	fclose(input);
 	return 0;
 }

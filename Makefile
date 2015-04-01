@@ -5,16 +5,16 @@ CFLAGS      =	-Wall  -pedantic -std=c99 -g -Iinclude -lm
 
 
 diary:
-	gcc $(CFLAGS)  src/foodDiary.c src/foodDiaryFunctions.c src/linkedList.c -lm -o bin/foodDiary
+	gcc $(CFLAGS)  src/main.c src/diary.c src/linkedList.c -lm -o bin/foodDiary
 
 test: 
-	gcc $(CFLAGS) src/test.c src/linkedList.c -o bin/listTest
+	gcc $(CFLAGS) src/testMain.c src/linkedList.c -o bin/listTest
 
 clean:
 	@ rm *.o
 
 testRun:
-	./bin/listTest docs/testFile.txt
+	./bin/listTest 
 
 diaryRun:
-	./bin/foodDiary docs/test3.txt
+	./bin/foodDiary assets/test3.txt

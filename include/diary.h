@@ -35,25 +35,26 @@ Post: Returns pointer to the newly created struct.
 Food * parseString(char * string);
 
 /*************************************************************************************************************
-Function: 
-Purpose: 
-Pre: 
-Post: 
+Function: updateTracker
+Purpose: To update the count of items per food group, calories for food group and total calories.
+Pre: Takes in a pointer to a struct containing the current counts for items per food group and calories per 
+     food group, a struct to the new food being added and the number of total calories.
+Post: Updates values instruct and returns new total calories.
 *************************************************************************************************************/
 double updateTracker(tracker * calTracker, Food * newFood, double calories);
 
 /*************************************************************************************************************
-Function: 
-Purpose: 
-Pre: 
-Post: 
+Function: printAverage
+Purpose: To print the average number of calories per item for each food group, getting averages from getAverage
+Pre: Takes in a pointer to the struct with the total items and calories for each food group.
+Post: Prints the average calories per item for each food group.
 *************************************************************************************************************/
 void printAverage(tracker * calTracker);
 
 /*************************************************************************************************************
-Function: 
-Purpose: 
-Pre: 
-Post: 
+Function: getAverage
+Purpose: To use the total number of items and total number of calories to find the average.
+Pre: Takes in the total number of items and calories.
+Post: Returns average.
 *************************************************************************************************************/
 double getAverage(int count, double calories);

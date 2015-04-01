@@ -27,6 +27,8 @@ int main() {
 	double calorie = 10.45;
 	char type = 'j';
 	char * printRecordString;
+	bool check;
+	Food * test;
 /*Testing createRecord*/
 	testFood = createRecord(name, group, calorie, type);
 	testFoodTwo = createRecord(name, group, calorie, type);
@@ -50,7 +52,13 @@ int main() {
 /*Testing getLastItem*/
     getLastItem(testFoodTwo);
 /*Testing isEmpty*/
-    isEmpty(testFoodTwo);
+    check = isEmpty(test);
+    if (check == true)
+    {
+    	printf("true\n");
+    } else if (check == false) {
+    	printf("false\n");
+    }
 /*Testing printList*/
     printList(testFoodTwo);
 /*Testing destroyList*/

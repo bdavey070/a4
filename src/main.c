@@ -46,14 +46,14 @@ int main(int argc, char * argv[]) {
 			tempFood = parseString(token);
 			totalCalories = updateTracker(calTracker, tempFood, totalCalories);
 			if (tempFood->type == 'h') {
-				healthyList = addToBack(healthyList, tempFood);
+				healthyList = addToFront(healthyList, tempFood);
 			} else {
 				junkList = addToBack(junkList, tempFood);
 			}
 		}
 	}
-/*Removes null member from front*/
-	healthyList = removeFromFront(healthyList);
+/*Removes null members*/
+	healthyList = removeFromBack(healthyList);
 	junkList = removeFromFront(junkList);
 /*Merges healthy and junk lists*/
 	theList = addToBack(healthyList, junkList);

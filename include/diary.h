@@ -12,6 +12,7 @@ I assert that this work is my own. I have appropriately acknowledged any and all
 Furthermore, I certify that this assignment was prepared by me specifically for this course.
 **********************************************************************************************/
 #include "linkedList.h"
+#define TEST 0;
 
 typedef struct tracker {
 	int vegfruitCount;

@@ -59,15 +59,35 @@ double updateTracker(tracker * calTracker, Food * toBeAdded, double calories) {
 void printAverage(tracker * calTracker) {
 	double tempDouble = 0.00;
 	tempDouble = getAverage(calTracker->vegfruitCount, calTracker->vegfruitCal);
-	printf("%.2f\n", tempDouble);
+	if (calTracker->vegfruitCount != 0 && calTracker->vegfruitCal != 0){
+		printf("%.2f\n", tempDouble);
+	} else {
+		printf("0.00\n");
+	}
 	tempDouble = getAverage(calTracker->meatCount, calTracker->meatCal);
-	printf("%.2f\n", tempDouble);
+	if (calTracker->meatCount != 0 && calTracker->meatCal != 0){
+		printf("%.2f\n", tempDouble);
+	} else {
+		printf("0.00\n");
+	}
 	tempDouble = getAverage(calTracker->dairyCount, calTracker->dairyCal);
-	printf("%.2f\n", tempDouble);
+	if (calTracker->dairyCount != 0 && calTracker->dairyCal != 0){
+		printf("%.2f\n", tempDouble);
+	} else {
+		printf("0.00\n");
+	}
 	tempDouble = getAverage(calTracker->grainsCount, calTracker->grainsCal);
-	printf("%.2f\n", tempDouble);
+	if (calTracker->grainsCount != 0 && calTracker->grainsCal != 0){
+		printf("%.2f\n", tempDouble);
+	} else {
+		printf("0.00\n");
+	}
 	tempDouble = getAverage(calTracker->fatCount, calTracker->fatCal);
-	printf("%.2f\n", tempDouble);
+	if (calTracker->fatCount != 0 && calTracker->fatCal != 0){
+		printf("%.2f\n", tempDouble);
+	} else {
+		printf("0.00\n");
+	}
 }
 
 double getAverage(int count, double calories) {

@@ -1,0 +1,19 @@
+Student Name: Benjamin Davey    Student Number: 0885413 
+Date: Wednesday, April 1, 2015  Course Name: CIS2500
+
+I have exclusive control over this submission via my password.
+By including this statement in this header comment, I certify that:
+     1) I have read and understood the University policy on academic integrity;
+     2) I have completed the Computing with Integrity Tutorial on Moodle; and
+     3) I have achieved at least 80% in the Computing with Integrity Self Test.
+I assert that this work is my own. I have appropriately acknowledged any and all material
+(data, images, ideas or words) that I have used, whether directly quoted or paraphrased.
+Furthermore, I certify that this assignment was prepared by me specifically for this course.
+
+Testing.
+
+I used a code a little, test a little method as suggested by Judi for the developement of this assignment.
+Every function in the linkedList was written and then immediately tested with the testMain.c method.
+For the testing of the linkedList.c functions, different values were thrown to the functions to check if the function acted as expected.
+For testing the food diary portion of the assignment, the same code a little, test a little method was used.
+The program has a test constant defined so that test lines of code will be ran when it is defined as 1.

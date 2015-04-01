@@ -17,4 +17,4 @@ testRun:
 	./bin/listTest 
 
 diaryRun:
-	./bin/foodDiary assets/test2.txt
+	./bin/foodDiary assets/test.txt

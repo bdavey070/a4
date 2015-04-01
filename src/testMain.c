@@ -29,6 +29,7 @@ int main() {
 	char * printRecordString;
 	bool check;
 	Food * test;
+    test = NULL;
 /*Testing createRecord*/
 	testFood = createRecord(name, group, calorie, type);
 	testFoodTwo = createRecord(name, group, calorie, type);
